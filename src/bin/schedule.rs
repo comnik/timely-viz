@@ -52,7 +52,7 @@ impl Handler<Updates> for Ws{
 
     fn handle(&mut self, msg: Updates, ctx: &mut Self::Context) {
         let text = serde_json::to_string(&msg).unwrap();
-        // println!("Sending: {}", text);
+        println!("Sending: {}", text);
         ctx.text(text);
     }
 }

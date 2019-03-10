@@ -118,6 +118,7 @@ fn main() {
 
             ({
                 operates_without_subg
+                    .filter(|(addr, _)| addr[0] == 0)
                     .consolidate()
                     .inner
                     .map(move |((addr, name), _, _)| {
